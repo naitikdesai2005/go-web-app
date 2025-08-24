@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: naitikdesai2005/go-web-app
+        image: naitikdesai2005/go-web-app:v1
         ports:
         - containerPort: 3000
