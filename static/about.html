@@ -1,90 +1,145 @@
-<Docktype html>
-<html>
-    <head>
-        <title>About</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Wanderlust Travels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+    header {
+      background: #1e90ff;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-            main {
-                padding: 20px;
-            }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-            section {
-                margin-bottom: 20px;
-            }
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+    h1, h2 {
+      color: #1e90ff;
+    }
 
-        <main>
-            <section>
-                <h1>About the Author</h1>
-                <p>Hi Everyone, My name is Abhishek and welcome to my channel :)</p>
+    section {
+      margin-bottom: 40px;
+    }
 
-                    <p>    I am an opensource enthusiast and a great believer in sharing knowledge. </p>
-                        <p>  I have my footprints in popular opensource projects like Argo CD, Argo CD Operator, Argo Rollouts Manager, GitOps Operator, F5 Ingress Controller, Nginx Ingress Controller by Nginx and others. </p>
-                    
-                            <p> Apart from working with Red Hat as a GitOps product lead, I also hold below positions in OpenSource communities</p>
-                                <p>  - Maintainer of Argo CD Operator</p>
-                                    <p> - Creator of Argo Rollouts Manager</p>
-                                        <p> - Maintainer of RedHat Developer (GitOps operator)</p>
-                                            <p> - Member of Argo Project</p>
-                                                <p> - Member of Argo SIG Security</p>
-                    
-                                                    <p> If you want to learn complete devops for free with practical projects, checkout the playlist</p>
-                                                        <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa"> Playlists</a></p>
-                    
-                                                            <p> Please subscribe to the channel to keep learning and growing together. Thanks :)</p>
-            </section>
-        </main>
+    .team {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+    .member {
+      background: #fff;
+      flex: 1;
+      min-width: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #1e90ff;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="courses">Packages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Company Story -->
+    <section>
+      <h1>About Us</h1>
+      <p>Welcome to <strong>Wanderlust Travels</strong>, your trusted travel partner since 2015. We believe that travel is not just about visiting new places, but about creating lifelong memories and stories that stay with you forever.</p>
+      <p>Our mission is to make travel seamless, affordable, and inspiring for everyone. From exotic international getaways to hidden gems in India, we curate experiences that bring cultures closer and spark adventure.</p>
+    </section>
+
+    <!-- Mission and Values -->
+    <section>
+      <h2>Our Mission & Values</h2>
+      <ul>
+        <li>🌍 To make world travel accessible for everyone</li>
+        <li>🤝 To build trust through personalized service</li>
+        <li>✨ To create unique travel experiences</li>
+        <li>♻️ To promote sustainable and responsible tourism</li>
+      </ul>
+    </section>
+
+    <!-- Meet the Team -->
+    <section>
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <div class="member">
+          <img src="https://via.placeholder.com/100" alt="Team Member">
+          <h3>Naitik Desai</h3>
+          <p>Co-Founder</p>
+          <p>The visionary behind Wanderlust Travels, Naitik has traveled to 35+ countries and loves curating unique journeys for our clients.</p>
+        </div>
+        <div class="member">
+          <img src="https://via.placeholder.com/100" alt="Team Member">
+          <h3>Shivam Patel</h3>
+          <p>Co-Founder</p>
+          <p>Shivam ensures every trip runs smoothly — from flights and hotels to on-ground experiences.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Wanderlust Travels. All rights reserved.</p>
+  </footer>
+</body>
 </html>

@@ -1,92 +1,151 @@
-<DocType html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wanderlust Travels - Packages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-<html>
-    <head>
-        <title>Learn DevOps from Basics</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+    header {
+      background: #1e90ff;
+      padding: 15px 0;
+      color: #fff;
+      text-align: center;
+    }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-            main {
-                padding: 20px;
-            }
+    main {
+      padding: 30px;
+    }
 
-            section {
-                margin-bottom: 20px;
-            }
+    section {
+      margin-bottom: 40px;
+    }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+    h1, h2 {
+      color: #1e90ff;
+    }
 
-        <main>
-            <section>
-                <h1>Learn DevOps from Basics</h1>
-                <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops)</p>
-                <p>It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps is complementary with Agile software development; several DevOps aspects came from Agile methodology</p>    
+    .packages {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-                <h2>Main Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa">DevOps Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze">AWS Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR">Azure Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvI0O4PeKVV1-yJoX2AqIWuf">Terraform Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv">Python Zero to Hero</a></p>
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 20px);
+      min-width: 280px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
 
-                <h2>Additional Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKv4MFW35XRskZbQbrt6ep-">Networking Fundamentals</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLxd5nmtmORCmhD5jkrNbuE">Ansible Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKu7OZpgj1-MzJFqZ8RBp6f">GitOps Zero to Hero</a></p>
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-                <h2>Troubleshooting Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIrFBI1farpLS_OSUBXJMLX">Troubleshooting Kubernetes</a></p>
-            </section>
-        </main>
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+    .card h3 {
+      margin: 15px;
+    }
+
+    .card p {
+      margin: 0 15px 15px;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      margin: 0 15px 20px;
+      font-weight: bold;
+      color: #28a745;
+    }
+
+    footer {
+      background: #1e90ff;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="courses">Packages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Travel Packages</h1>
+      <p>Choose from our exclusive travel packages designed for unforgettable experiences.</p>
+    </section>
+
+    <section class="packages">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris">
+        <h3>Romantic Paris Getaway</h3>
+        <p>5 nights in Paris with guided tours of the Eiffel Tower, Louvre Museum, and Seine River cruise.</p>
+        <p class="price">$1,200 / person</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Maldives">
+        <h3>Maldives Luxury Retreat</h3>
+        <p>7 nights in an overwater villa, all-inclusive meals, snorkeling, and spa sessions.</p>
+        <p class="price">$2,500 / person</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526481280698-8fcc5f9c8e1a?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+        <h3>Tokyo Adventure</h3>
+        <p>6 nights exploring Tokyo’s culture, technology hubs, Mt. Fuji tour, and Japanese cuisine experience.</p>
+        <p class="price">$1,800 / person</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Wanderlust Travels. All rights reserved.</p>
+  </footer>
+</body>
 </html>
